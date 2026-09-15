@@ -9,7 +9,7 @@ Repository: **https://github.com/DharmiSapariya/jpmc_quant_research_certificatio
 
 This repository contains my completed work from the **JPMorgan Chase & Co. Quantitative Research Job Simulation**, a self-paced virtual experience program run on [Forage](https://www.theforage.com). The simulation is built around two realistic business scenarios drawn from JPMorgan's Quantitative Research (QR) team: pricing natural gas storage contracts for a commodities trading desk, and building credit risk models for a retail banking arm.
 
-> **Note on what this is:** This is an educational simulation, not paid employment, an internship, or official work product of JPMorgan Chase & Co. The task briefs and business scenarios were provided by JPMorgan for the Forage program; the code, models, analysis, and write-ups here are my own work completed in response to them.
+
 
 ---
 
