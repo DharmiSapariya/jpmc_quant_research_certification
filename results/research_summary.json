@@ -1,0 +1,196 @@
+{
+  "forecasting": [
+    {
+      "model": "holt_winters",
+      "n_test": 24,
+      "mae": 0.18444747599264807,
+      "rmse": 0.21907841549327,
+      "mape": 1.5714490906324787,
+      "smape": 1.5720106337424284,
+      "directional_accuracy": 0.6521739130434783
+    },
+    {
+      "model": "sarima",
+      "n_test": 24,
+      "mae": 0.29685638425367444,
+      "rmse": 0.3587076932344232,
+      "mape": 2.5133070231128833,
+      "smape": 2.5343722737182985,
+      "directional_accuracy": 0.6086956521739131
+    },
+    {
+      "model": "moving_average",
+      "n_test": 24,
+      "mae": 0.4208333333333332,
+      "rmse": 0.5094932122544256,
+      "mape": 3.585902568480505,
+      "smape": 3.6025369714584934,
+      "directional_accuracy": 0.6086956521739131
+    },
+    {
+      "model": "linear_trend",
+      "n_test": 24,
+      "mae": 0.4882650334960546,
+      "rmse": 0.5626633790741904,
+      "mape": 4.12584901302944,
+      "smape": 4.148671732162147,
+      "directional_accuracy": 0.391304347826087
+    },
+    {
+      "model": "seasonal_naive",
+      "n_test": 24,
+      "mae": 0.5666666666666668,
+      "rmse": 0.621825270205921,
+      "mape": 4.812641124679514,
+      "smape": 4.955589064460207,
+      "directional_accuracy": 0.6956521739130435
+    },
+    {
+      "model": "historical_mean",
+      "n_test": 24,
+      "mae": 0.7951429084594176,
+      "rmse": 0.9349066046799597,
+      "mape": 6.610867589152429,
+      "smape": 6.9195135072329235,
+      "directional_accuracy": 0.5217391304347826
+    }
+  ],
+  "storage": [
+    {
+      "scenario": "base_assumption",
+      "npv": 1231.0000000000005,
+      "injection_cost": 2460.0,
+      "withdrawal_revenue": 3715.0,
+      "storage_cost": 24.0,
+      "utilization": 0.5
+    },
+    {
+      "scenario": "low_price_assumption",
+      "npv": 976.0000000000006,
+      "injection_cost": 1970.0,
+      "withdrawal_revenue": 2970.0000000000005,
+      "storage_cost": 24.0,
+      "utilization": 0.5
+    },
+    {
+      "scenario": "high_price_assumption",
+      "npv": 1486.0000000000005,
+      "injection_cost": 2950.0,
+      "withdrawal_revenue": 4460.0,
+      "storage_cost": 24.0,
+      "utilization": 0.5
+    },
+    {
+      "scenario": "higher_storage_fee",
+      "npv": 1075.0000000000005,
+      "injection_cost": 2460.0,
+      "withdrawal_revenue": 3715.0,
+      "storage_cost": 180.0,
+      "utilization": 0.5
+    },
+    {
+      "scenario": "reduced_capacity",
+      "npv": 741.0000000000002,
+      "injection_cost": 1179.9999999999998,
+      "withdrawal_revenue": 1945.0,
+      "storage_cost": 24.0,
+      "utilization": 0.5
+    },
+    {
+      "scenario": "higher_transaction_fee",
+      "npv": 951.0,
+      "injection_cost": 2600.0,
+      "withdrawal_revenue": 3575.0,
+      "storage_cost": 24.0,
+      "utilization": 0.5
+    },
+    {
+      "scenario": "restricted_withdrawal",
+      "npv": 687.0000000000005,
+      "injection_cost": 1681.9999999999998,
+      "withdrawal_revenue": 2393.0,
+      "storage_cost": 24.0,
+      "utilization": 0.29583333333333334
+    }
+  ],
+  "credit_risk": [
+    {
+      "model": "logistic_regression",
+      "roc_auc": 0.9999978794038156,
+      "pr_auc": 0.9999906803463766,
+      "precision": 1.0,
+      "recall": 0.9913606911447084,
+      "f1": 0.9956616052060737,
+      "brier": 0.0027962376922135803,
+      "log_loss": 0.012811046027790474,
+      "assumed_recovery_rate": 0.1,
+      "expected_loss_total": 1862519.308574608
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "roc_auc": 0.9999268394316378,
+      "pr_auc": 0.9996815680052257,
+      "precision": 0.9892241379310345,
+      "recall": 0.9913606911447084,
+      "f1": 0.9902912621359223,
+      "brier": 0.0026288785371128527,
+      "log_loss": 0.008796528193300785,
+      "assumed_recovery_rate": 0.1,
+      "expected_loss_total": 1854645.9016817994
+    },
+    {
+      "model": "random_forest",
+      "roc_auc": 0.9997943021701121,
+      "pr_auc": 0.9991288615672158,
+      "precision": 0.9891304347826086,
+      "recall": 0.9827213822894169,
+      "f1": 0.9859154929577465,
+      "brier": 0.005884301827842551,
+      "log_loss": 0.021517648525498492,
+      "assumed_recovery_rate": 0.1,
+      "expected_loss_total": 1853722.0744140032
+    },
+    {
+      "model": "decision_tree",
+      "roc_auc": 0.9976609824085944,
+      "pr_auc": 0.9862886515728846,
+      "precision": 0.9725400457665904,
+      "recall": 0.91792656587473,
+      "f1": 0.9444444444444444,
+      "brier": 0.013528963915313842,
+      "log_loss": 0.06879106654004111,
+      "assumed_recovery_rate": 0.1,
+      "expected_loss_total": 1837295.1195703014
+    }
+  ],
+  "fico": [
+    {
+      "method": "dynamic_programming",
+      "buckets": 10,
+      "test_log_likelihood": -1086.070715501155,
+      "min_train_bucket": 96,
+      "monotonic_train": false
+    },
+    {
+      "method": "equal_width",
+      "buckets": 10,
+      "test_log_likelihood": -1090.6595793635415,
+      "min_train_bucket": 1,
+      "monotonic_train": true
+    },
+    {
+      "method": "equal_frequency",
+      "buckets": 10,
+      "test_log_likelihood": -1098.8186883282701,
+      "min_train_bucket": 712,
+      "monotonic_train": true
+    },
+    {
+      "method": "quantile",
+      "buckets": 10,
+      "test_log_likelihood": -1098.8186883282701,
+      "min_train_bucket": 712,
+      "monotonic_train": true
+    }
+  ]
+}
