@@ -1,0 +1,19 @@
+{
+  "train_iv_dp": 0.8544785156758423,
+  "edges": [
+    -Infinity,
+    493.0,
+    522.0,
+    555.0,
+    581.0,
+    611.0,
+    650.0,
+    697.0,
+    733.0,
+    742.0,
+    Infinity
+  ],
+  "minimum_train_population": 96,
+  "narrow_752_753_present": false,
+  "warning": "The 752\u2013753 anomaly requires direct original-assignment boundary analysis; these DP boundaries are separately fitted. No bootstrap analysis completed."
+}

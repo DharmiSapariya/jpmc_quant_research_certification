@@ -1,0 +1,5 @@
+method,buckets,test_log_likelihood,min_train_bucket,monotonic_train
+dynamic_programming,10,-1086.070715501155,96,False
+equal_width,10,-1090.6595793635415,1,True
+equal_frequency,10,-1098.8186883282701,712,True
+quantile,10,-1098.8186883282701,712,True
