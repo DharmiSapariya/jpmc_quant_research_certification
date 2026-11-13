@@ -1,0 +1,7 @@
+{
+  "best_model_by_mae": "holt_winters",
+  "n_months": 48,
+  "n_one_step_origins": 24,
+  "empirical_abs_error_90pct": 0.3598421005007926,
+  "warning": "Band estimated using same holdout errors; NOT calibrated out-of-sample coverage. Multi-step horizons not evaluated."
+}
