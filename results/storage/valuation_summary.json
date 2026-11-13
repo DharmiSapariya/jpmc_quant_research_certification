@@ -1,0 +1,8 @@
+{
+  "base_case_undiscounted_npv": 1231.0000000000005,
+  "cashflow_sum": 1231.0000000000005,
+  "price_source": "Illustrative assumed 12-period price path; not market observations",
+  "discount_rate": 0,
+  "optimization": "Retrospective LP with perfect foresight",
+  "caveat": "Simultaneous injection and withdrawal are allowed in LP but positive transaction costs discourage them."
+}

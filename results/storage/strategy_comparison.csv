@@ -1,0 +1,3 @@
+strategy,npv_undiscounted,perfect_foresight
+no_action,-24.0,False
+retrospective_lp,1231.0000000000005,True
