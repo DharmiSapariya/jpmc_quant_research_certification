@@ -1,0 +1,10 @@
+{
+  "n_records": 10000,
+  "n_default": 1851,
+  "duplicate_rows": 0,
+  "holdout_roc_auc": 0.9999978794038156,
+  "holdout_pr_auc": 0.9999906803463766,
+  "cv_mean_roc_auc": 0.999987038151297,
+  "synthetic_provenance": "Not established by provided data; do not claim real-world performance",
+  "warning": "Very high discrimination warrants target construction/provenance audit and external temporal validation; threshold curve uses test data for diagnostic illustration, not threshold selection."
+}

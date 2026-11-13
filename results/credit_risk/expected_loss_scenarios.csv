@@ -1,0 +1,10 @@
+lgd_assumption,expected_loss,ead_source,lgd_source
+0.1,206946.58984162312,observed loan_amt_outstanding,assumption
+0.2,413893.17968324624,observed loan_amt_outstanding,assumption
+0.30000000000000004,620839.7695248693,observed loan_amt_outstanding,assumption
+0.4,827786.3593664925,observed loan_amt_outstanding,assumption
+0.5,1034732.9492081156,observed loan_amt_outstanding,assumption
+0.6,1241679.5390497386,observed loan_amt_outstanding,assumption
+0.7000000000000001,1448626.1288913619,observed loan_amt_outstanding,assumption
+0.8,1655572.718732985,observed loan_amt_outstanding,assumption
+0.9,1862519.308574608,observed loan_amt_outstanding,assumption
