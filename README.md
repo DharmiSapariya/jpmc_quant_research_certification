@@ -336,15 +336,15 @@ Leakage protection is structural: the evaluation loop hands each model only `y[:
 
 The contract is modelled as an exact cash-flow ledger with physical constraints, then optimised as a **linear program** solved with SciPy's HiGHS solver.
 
-$$
-\max_{i_t,\,w_t}\ \sum_{t=1}^{T}\Big[\,w_t\,(p_t-\phi)\;-\;i_t\,(p_t+\phi)\;-\;s\,\Big]
-$$
+```math
+\max_{i_t,\quad w_t} \sum_{t=1}^{T} \Big[ w_t (p_t - \phi) - i_t (p_t + \phi) - s \Big]
+```
 
 subject to
 
-$$
-I_t = I_0+\sum_{\tau\le t}(i_\tau-w_\tau),\qquad 0\le I_t\le C,\qquad I_T=I_{\text{terminal}},\qquad 0\le i_t\le \bar i,\quad 0\le w_t\le \bar w
-$$
+```math
+I_t = I_0 + \sum_{\tau \le t} (i_\tau - w_\tau), \qquad 0 \le I_t \le C, \qquad I_T = I_{\text{terminal}}, \qquad 0 \le i_t \le \bar{i}, \quad 0 \le w_t \le \bar{w}
+```
 
 where $p_t$ is the price, $i_t$ and $w_t$ are injection and withdrawal volumes, $\phi$ is the per-unit transaction fee, $s$ is the storage fee per period, $C$ is capacity and $I_t$ is inventory.
 
@@ -444,9 +444,9 @@ Logistic regression's confusion matrix at the 0.5 threshold: **2,037 true negati
 
 ### Expected loss and the recovery-rate assumption
 
-$$
-\text{Expected Loss}=\text{PD}\times\text{LGD}\times\text{EAD},\qquad \text{LGD}=1-\text{recovery rate}
-$$
+```math
+\text{Expected Loss} = \text{PD} \times \text{LGD} \times \text{EAD}, \qquad \text{LGD} = 1 - \text{recovery rate}
+```
 
 PD comes from the model, EAD is the observed `loan_amt_outstanding`, and **LGD is an assumption**, because the data contains no recovery information. Instead of hiding that, the project sweeps it:
 
@@ -489,10 +489,13 @@ PD comes from the model, EAD is the observed `loan_amt_outstanding`, and **LGD i
 
 Each candidate bucket is scored by the **Bernoulli log-likelihood** of its observed default rate, which rewards buckets that are internally homogeneous in risk. The best 10-bucket partition is found *exactly* with dynamic programming over the distinct observed score values.
 
-$$
-\mathrm{LL}(i,j)=k\ln\frac{k}{n}+(n-k)\ln\!\Big(1-\frac{k}{n}\Big),\qquad
-\mathrm{dp}[b][j]=\max_{\,i<j,\;n(i,j)\ge n_{\min}}\ \mathrm{dp}[b-1][i]+\mathrm{LL}(i,j)
-$$
+```math
+\mathrm{LL}(i,j) = k \ln\frac{k}{n} + (n-k)\ln\left(1 - \frac{k}{n}\right)
+```
+
+```math
+\mathrm{dp}[b][j] = \max_{i<j \text{ and } n(i,j) \ge n_{\min}} \left( \mathrm{dp}[b-1][i] + \mathrm{LL}(i,j) \right)
+```
 
 where $n$ and $k$ are the borrowers and defaults in the candidate bucket $(i,j]$, and $n_{\min}=50$ is the minimum bucket population.
 
@@ -699,7 +702,7 @@ This project is **not affiliated with, endorsed by, or employment experience at 
 
 <div align="center">
 
-**Author:** [Your Name](https://github.com/your-username)
+**Author:** [Dharmi Sapariya](https://github.com/DharmiSapariya)
 
 *If something in this repository can't be traced to a CSV and a command, that's a bug. Open an issue.*
 
